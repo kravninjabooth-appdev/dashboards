@@ -16,6 +16,7 @@ class CurrpairsController < ApplicationController
     @symbols_hash = @parsed_data.fetch("symbols")
 
     @array_of_symbols = @symbols_hash.keys
+    @a_conversion = @symbols_hash.keys
     render({:template => "currency_templates/conversion.html.erb"})
   end
 
