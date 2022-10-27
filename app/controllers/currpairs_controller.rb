@@ -10,7 +10,7 @@ class CurrpairsController < ApplicationController
   end
 
   def second_currency
-    display_cur_conversion   
+    #display_cur_conversion   
 
     @raw_data = open("https://api.exchangerate.host/symbols").read
     @parsed_data = JSON.parse(@raw_data)

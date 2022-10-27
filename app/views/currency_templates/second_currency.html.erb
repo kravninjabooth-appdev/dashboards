@@ -1,12 +1,12 @@
 <h1>Convert</h1>
 
-<p>Go <a href="/forex">back</a></p>
+<p>Go <a href="/forex">back</a>.</p>
 
 <ul>
-    <%= @array_of_symbols.each_with_index do |a_symbol, the_index| %>
+    <%= @array_of_symbols.each do |a_symbol| %>
       <li>
-        <a href="/forex/<%= a_symbol %>/<%=@a_symbol.index%>">
-        Convert 1 <%= a_symbol %> to <%=@a_symbol.index%>...
+        <a href="/forex/<%= a_symbol %>">
+        Convert 1 <%= a_symbol %> to ...
         </a>
       </li>
     <% end %>
