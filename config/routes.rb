@@ -3,7 +3,5 @@ Rails.application.routes.draw do
 
   get("/", {:controller => "application", :action =>"dashboard"})
 
-  #  get("/", {:controller => "application", :action => "add"})
-
-  # get ("/forex", {:controller =>"application ", :action =>"forex" })
+  get("/forex", {:controller =>"application ", :action =>"forex"})
 end
