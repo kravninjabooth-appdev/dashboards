@@ -23,8 +23,7 @@ class CurrpairsController < ApplicationController
   end
 
   def currency_conversion
-    #display_cur_conversion 
-    #Parameters: {"cur_symbol"=>"AED"}  
+    
 
     @from_symbol = params.fetch("cur_symbol")
     @conversion_symbol = params.fetch("cur_conversion")
@@ -32,9 +31,7 @@ class CurrpairsController < ApplicationController
     @raw_data = open("https://api.exchangerate.host/convert?from=#{@from_symbol}&to=#{@conversion_symbol}").read
     @parsed_data = JSON.parse(@raw_data)
     @info_hash = @parsed_data.fetch("info")
-    @rate_hash = @info_hash.fetch("rate")
-    # @array_of_symbols = @symbols_hash.keys
-    
+    @rate_hash = @info_hash.fetch("rate")  
     
     render({:template => "currency_templates/currency_conversion.html.erb"})
   end
